@@ -2,6 +2,7 @@ Docker Compose:
 ===============
 
 Docker Compose is used for creating a multicontainer architecture.
+
 Docker Compose files are created using yaml or yml files and they are more re-usable.
 
 Installing Docker Compose:
@@ -20,8 +21,11 @@ Steps to Write and perform actions over docker compose:
    
    Syntax:
       docker-compose -f filename up -d
+   
    - filename: you can give in which file you saved the docker-compose activity that file name should give over therr.
+   
    - in my case i given like this compose1.yml
+      
       eg: docker-compose -f compose1.yml up -d
 
 2) To start the environment in detached mode:
