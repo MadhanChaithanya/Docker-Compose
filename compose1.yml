@@ -1,0 +1,21 @@
+# Usecase-1:
+# Create a Docker Compose File for linking MySQL Container with Wordpress Container
+# Solution:
+---
+version: '3'
+
+services:
+ mydb:
+  image: mysql:5 
+  environment: 
+   MYSQL_ROOT_PASSWORD: chaithanya
+
+ mywordpress:
+  image: wordpress
+  ports:
+   - 8888:80
+  links:
+   - mydb:mysql
+     
+
+...

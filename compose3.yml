@@ -1,0 +1,21 @@
+# Usecase-3:
+# Create a Docker Compose File for linking MySQL Container with Ghost Container.
+# Solution:
+---
+version: '3'
+
+services:
+ mydb:
+  image: mysql:5
+  environment: 
+   MYSQL_ROOT_PASSWORD: chaithanya
+
+ myghost:
+  image: ghost
+  ports:
+   - 8888:2368
+  links:
+   - mydb:mysql
+
+
+...

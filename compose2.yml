@@ -1,0 +1,29 @@
+# Usecase-2:
+# Create a Docker Compose File for linking Jenkins Container with 2 tomcat containers for 
+# DevOps Engineer to Perform CI-CD.
+# Solution:
+---
+version: '3'
+services:
+ jenkins:
+  image: jenkins
+  ports:
+   - 5050:8080
+
+ qaserver:
+  image: tomcat
+  ports:
+   - 6060:8080
+  links:
+   - jenkins:myjenkins
+
+ prodserver:
+  image: tomcat
+  ports:
+   - 7070:8080
+  links:
+   - jenkins:myjenkins
+  
+
+
+...
