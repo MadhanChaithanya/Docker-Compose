@@ -17,6 +17,7 @@ Installing Docker Compose:
 Steps to Write and perform actions over docker compose:
 ===========================================================
 1) To run the files which I uploaded here the format is :
+   
    Syntax:
       docker-compose -f filename up -d
    - filename: you can give in which file you saved the docker-compose activity that file name should give over therr.
@@ -24,11 +25,14 @@ Steps to Write and perform actions over docker compose:
       eg: docker-compose -f compose1.yml up -d
 
 2) To start the environment in detached mode:
+    
     docker-compose -f compose1.yml up -d
     
 3) To stop the environment:
+    
     docker-compose -f compose1.yml stop -d
     
 4) To delete the enviroment:
+    
     docker-compose -f compose1.yml down -d
 
